@@ -1,11 +1,11 @@
-import AppRoutes from "./routes/AppRoutes";
-import { BrowserRouter as Router } from "react-router-dom";
+import SpendingProvider from "./context/SpendingProvider";
+import BalanceSheet from "./components/BalanceSheet/BalanceSheet";
 
 function App() {
   return (
-    <Router>
-      <AppRoutes />
-    </Router>
+    <SpendingProvider>
+      <BalanceSheet />
+    </SpendingProvider>
   );
 }
 

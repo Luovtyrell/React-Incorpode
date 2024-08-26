@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
+@layer base {
   :root {
+    font-family: 'Monaco';
+    background-color: #efefef;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
   }
-} */
+}
