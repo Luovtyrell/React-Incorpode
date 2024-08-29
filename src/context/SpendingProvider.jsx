@@ -3,13 +3,20 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 const SpendingProvider = ({ children }) => {
-  const [balance, setBalance] = useState(499);
+  const [weeklyExpenses, setWeeklyExpenses] = useState(254);
+  const [totalExpenses, setTotalExpenses] = useState(3423);
+
+  const addExpense = (amount) => {
+    setWeeklyExpenses((prev) => prev + amount);
+    setTotalExpenses((prev) => prev + amount);
+  };
 
   return (
     <SpendingContext.Provider
       value={{
-        balance,
-        setBalance,
+        weeklyExpenses,
+        totalExpenses,
+        addExpense,
       }}>
       {children}
     </SpendingContext.Provider>
