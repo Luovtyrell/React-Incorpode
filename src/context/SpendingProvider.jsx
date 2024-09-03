@@ -7,6 +7,9 @@ const SpendingProvider = ({ children }) => {
   const [totalExpenses, setTotalExpenses] = useState(3423);
 
   const addExpense = (amount) => {
+    if (typeof amount !== "number" || isNaN(amount)) {
+      throw new Error("Amount must be a valid number");
+    }
     setWeeklyExpenses((prev) => prev + amount);
     setTotalExpenses((prev) => prev + amount);
   };
