@@ -5,6 +5,9 @@ const SpendingContext = createContext({
   totalExpenses: 0,
   addExpense: () => {},
   setWeeklyExpenses: () => {},
+  getTodayExpenses: () => {},
+  getYesterdayExpenses: () => {},
+  getPercentageChange: () => {},
 });
 
 export default SpendingContext;

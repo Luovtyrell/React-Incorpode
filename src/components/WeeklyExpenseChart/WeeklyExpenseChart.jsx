@@ -16,13 +16,13 @@ const WeeklyExpensesChart = () => {
   const { weeklyExpenses } = useSpending();
 
   const barColors = [
-    "#AFC97E",
-    "#AFC97E",
-    "#AFC97E",
-    "#AFC97E",
-    "#AFC97E",
-    "#AFC97E",
-    "#A41623",
+    "#003049",
+    "#003049",
+    "#003049",
+    "#003049",
+    "#003049",
+    "#003049",
+    "#E4572E",
   ];
 
   const chartData = {

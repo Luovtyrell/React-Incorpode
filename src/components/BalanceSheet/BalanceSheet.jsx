@@ -20,7 +20,7 @@ const BalanceSheet = () => {
               {showWeekly ? "Balanç total de la setmana:" : "Balanç total:"}
             </p>
             <h5 className="mb-2 text-4xl font-extrabold tracking-tight mt-2">
-              {showWeekly ? totalWeeklyExpenses : totalExpenses} €
+              {showWeekly ? totalWeeklyExpenses.toFixed(2) : totalExpenses.toFixed(2)} €
             </h5>
           </div>
           <button
