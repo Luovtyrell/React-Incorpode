@@ -1,6 +1,7 @@
 import { Bar } from "react-chartjs-2";
+import { useTranslation } from "react-i18next";
 import useSpending from "../../hooks/useSpending";
-import chartOptions from "./chartOptions";
+import useChartOptions from "../../hooks/useChartOptions";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -13,23 +14,33 @@ import {
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip);
 
 const WeeklyExpensesChart = () => {
+  const { t } = useTranslation();
   const { weeklyExpenses } = useSpending();
+  const chartOptions = useChartOptions();
 
   const barColors = [
-    "#003049",
-    "#003049",
-    "#003049",
-    "#003049",
-    "#003049",
-    "#003049",
-    "#E4572E",
+    "#0029FF",
+    "#0029FF",
+    "#0029FF",
+    "#0029FF",
+    "#0029FF",
+    "#0029FF",
+    "#FF5600",
   ];
 
   const chartData = {
-    labels: ["Dll", "Dm", "Dx", "Dj", "Dv", "Ds", "Dg"],
+    labels: [
+      t("mon"),
+      t("tue"),
+      t("wed"),
+      t("thu"),
+      t("fri"),
+      t("sat"),
+      t("sun"),
+    ],
     datasets: [
       {
-        label: "Despeses (€)",
+        label: t("expenses"),
         data: weeklyExpenses,
         backgroundColor: barColors,
         borderWidth: 0,
