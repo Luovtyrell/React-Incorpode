@@ -1,9 +1,10 @@
 import { createContext } from "react";
 
 const SpendingContext = createContext({
-  weeklyExpenses: 0,
+  weeklyExpenses: [],
   totalExpenses: 0,
   addExpense: () => {},
+  setWeeklyExpenses: () => {},
 });
 
 export default SpendingContext;

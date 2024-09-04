@@ -1,8 +1,10 @@
 import { useState } from "react";
 import useSpending from "../../hooks/useSpending";
+import RightArrow from "../../assets/png/flecha-derecha.png";
+import LeftArrow from "../../assets/png/flecha-izquierda.png";
 
 const BalanceSheet = () => {
-  const { weeklyExpenses, totalExpenses } = useSpending();
+  const { totalWeeklyExpenses, totalExpenses } = useSpending();
   const [showWeekly, setShowWeekly] = useState(true);
 
   const handleArrowClick = () => {
@@ -18,7 +20,7 @@ const BalanceSheet = () => {
               {showWeekly ? "Balanç total de la setmana:" : "Balanç total:"}
             </p>
             <h5 className="mb-2 text-4xl font-extrabold tracking-tight mt-2">
-              {showWeekly ? weeklyExpenses : totalExpenses} €
+              {showWeekly ? totalWeeklyExpenses : totalExpenses} €
             </h5>
           </div>
           <button
@@ -27,7 +29,11 @@ const BalanceSheet = () => {
             aria-label={
               showWeekly ? "Show total balance" : "Show weekly balance"
             }>
-            {showWeekly ? "→" : "←"}
+            <img
+              src={showWeekly ? RightArrow : LeftArrow}
+              alt={showWeekly ? "Show total balance" : "Show weekly balance"}
+              className="w-6 h-6"
+            />
           </button>
         </div>
       </div>
