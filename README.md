@@ -2,7 +2,7 @@
 
 # React Incorpode
 
-<div align="center"><img src="./public/demo/Incorpode.gif"></div> 
+<div align="center"><img src="./public/demo/Incorpode.gif" width="270"></div> 
 <br>
 
 This project involves creating a frontend application for managing and visualizing expenses. Using React and context, the app handles expense balance, today's expenses, percentage changes, and chart data. It integrates charts with Charts.js and supports multiple languages via the i18n library. Code quality is ensured with Vitest JSDOM tests and SonarCloud.
@@ -160,14 +160,16 @@ To get started with React-Incorpode, follow these steps:
    npm run dev
    ```
 
+
 ## Screenshots
 
 | Component                | Screenshot                                                                                                          | Description                                                                                                          |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Balance Sheet**        | ![Home Page](./public/demo/balanceSheet.png) ![Task Management](./public/demo/balanceSheetWeekly.png)               | Displays weekly or total expenses with a toggle button. Integrates with `useSpending` and `i18n.`                    |
-| **Weekly Expense Chart** | ![Task Management](./public/demo/WeeklyExpenseChart.png)                                                            | Renders a bar chart of weekly expenses using `react-chartjs-2` and `Chart.js`, with labels in the selected language. |
-| **Daily Expenses**       | ![Charts & Reports](./public/demo/DailyExpensesCat.png)![Charts & Reports](./public/demo/DailyExpenses%20copia.png) | Shows today’s expenses and percentage change from yesterday. Updates color and symbol based on the change.           |
-| **Language Selector**    | ![Multi-language](./public/demo/LanguageSelector.png)                                                               | Let users switch between languages using flags. Utilizes `i18n` for language changes.                                |
+| **Balance Sheet**        | <img src="./public/demo/balanceSheet.png" alt="Home Page" width="300"/> <img src="./public/demo/balanceSheetWeekly.png" alt="Task Management" width="300"/>               | Displays weekly or total expenses with a toggle button. Integrates with `useSpending` and `i18n.`                    |
+| **Weekly Expense Chart** | <img src="./public/demo/WeeklyExpenseChart.png" alt="Task Management" width="300"/>                                                            | Renders a bar chart of weekly expenses using `react-chartjs-2` and `Chart.js`, with labels in the selected language. |
+| **Daily Expenses**       | <img src="./public/demo/DailyExpensesCat.png" alt="Charts & Reports" width="300"/> <img src="./public/demo/DailyExpenses%20copia.png" alt="Charts & Reports" width="300"/> | Shows today’s expenses and percentage change from yesterday. Updates color and symbol based on the change.           |
+| **Language Selector**    | <img src="./public/demo/LanguageSelector.png" alt="Multi-language" width="300"/>                                                               | Let users switch between languages using flags. Utilizes `i18n` for language changes.                                |
+
 
 ## Contributing
 
